@@ -128,20 +128,20 @@ export default function ContactPage() {
                   <strong className="text-[#FEF3C7]">General Inquiries:</strong>
                   <br />
                   <a
-                    href="mailto:info@outdoorpicks.com"
+                    href="mailto:info@outdoorpicks.net"
                     className="text-[#D97706] hover:underline break-all"
                   >
-                    info@outdoorpicks.com
+                    info@outdoorpicks.net
                   </a>
                 </p>
                 <p className="text-sm text-[#D97706]">
                   <strong className="text-[#FEF3C7]">Gear Suggestions:</strong>
                   <br />
                   <a
-                    href="mailto:info@outdoorpicks.com"
+                    href="mailto:info@outdoorpicks.net"
                     className="text-[#D97706] hover:underline break-all"
                   >
-                    info@outdoorpicks.com
+                    info@outdoorpicks.net
                   </a>
                 </p>
               </div>
