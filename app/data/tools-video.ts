@@ -1,0 +1,423 @@
+import { Video, type LucideIcon } from "lucide-react";
+
+export interface ToolData {
+  id: string;
+  name: string;
+  category: string;
+  rating: number;
+  reviewCount: number;
+  icon: LucideIcon;
+  description: string;
+  longDescription: string;
+  pros: string[];
+  cons: string[];
+  pricing: string;
+  pricingDetail: string;
+  features: string[];
+  useCase: string;
+  alternatives: string[];
+  scoreBreakdown: {
+    features: number;
+    reviews: number;
+    momentum: number;
+    popularity: number;
+  };
+  userQuotes: {
+    role: string;
+    company: string;
+    quote: string;
+  }[];
+}
+
+export const VIDEO_TOOLS: ToolData[] = [
+  {
+    id: "synthesia",
+    name: "Synthesia",
+    category: "AI Video & Audio",
+    rating: 4.8,
+    reviewCount: 3200,
+    icon: Video,
+    description: "AI video generation platform that creates professional videos with AI avatars from text.",
+    longDescription: "Synthesia is a leading AI video creation platform that lets you generate professional-quality videos with realistic AI avatars simply by typing text. With support for over 120 languages and 140+ diverse AI presenters, it is widely used by enterprises for training, marketing, and internal communications without the need for cameras, studios, or actors.",
+    pros: [
+      "Highly realistic AI avatars with natural lip-sync and expressions",
+      "Supports 120+ languages with accurate pronunciation",
+      "Enterprise-grade security and SSO integration",
+    ],
+    cons: [
+      "Avatar customization options are somewhat limited",
+      "Higher pricing compared to some competitors",
+    ],
+    pricing: "$29/mo",
+    pricingDetail: "Starter $29/mo | Creator $89/mo | Enterprise Custom",
+    features: [
+      "Text-to-Video with AI Avatars",
+      "140+ Diverse AI Presenters",
+      "120+ Language and Voice Options",
+      "Custom Avatar Creation",
+      "Screen Recording and Screen Share",
+      "Video Templates for Quick Start",
+      "Team Collaboration Workspace",
+      "SSO and Enterprise Security",
+      "API Access for Integrations",
+      "Video Hosting and Sharing",
+    ],
+    useCase: "Corporate training, product demos, internal communications, and marketing videos for enterprises and content creators who want professional videos without production overhead.",
+    alternatives: ["heygen", "descript"],
+    scoreBreakdown: { features: 95.0, reviews: 93.0, momentum: 98.0, popularity: 99.0 },
+    userQuotes: [
+      { role: "Head of L&D", company: "Fortune 500 Company", quote: "Synthesia cut our video production time by 80% and eliminated the need for external studios entirely." },
+    ],
+  },
+  {
+    id: "heygen",
+    name: "HeyGen",
+    category: "AI Video & Audio",
+    rating: 4.7,
+    reviewCount: 2800,
+    icon: Video,
+    description: "AI video generator for creating talking-head videos with lifelike avatars and voice cloning.",
+    longDescription: "HeyGen (formerly HeyFriday) is a powerful AI video generation platform that enables users to create realistic talking-head videos using AI avatars, voice cloning, and text-to-speech. It features a large library of templates, supports multilingual video creation, and offers a unique video translation feature that preserves the original speaker's voice and lip movements across languages.",
+    pros: [
+      "Excellent voice cloning and lip-sync accuracy",
+      "Video translation with voice preservation across 40+ languages",
+      "Intuitive and user-friendly interface",
+    ],
+    cons: [
+      "Free plan has limited features and watermark",
+      "Avatar variety is smaller than some competitors",
+    ],
+    pricing: "$24/mo",
+    pricingDetail: "Creator $24/mo | Business $49/mo | Enterprise Custom",
+    features: [
+      "AI Talking-Head Video Generation",
+      "Voice Cloning with Emotional Tones",
+      "Video Translation (Voice + Lip Sync)",
+      "Pre-built Video Templates",
+      "Custom Avatar Creation",
+      "AI Script Assistant",
+      "Video Personalization at Scale",
+      "Team Collaboration",
+      "API Access",
+      "Brand Kit and Customization",
+    ],
+    useCase: "Sales outreach, personalized video messaging, multilingual content localization, and social media content creation.",
+    alternatives: ["synthesia", "descript"],
+    scoreBreakdown: { features: 93.0, reviews: 91.0, momentum: 96.0, popularity: 94.0 },
+    userQuotes: [
+      { role: "Marketing Manager", company: "SaaS Startup", quote: "HeyGen's video translation is mind-blowing — we localized our entire product demo in 12 languages in one afternoon." },
+    ],
+  },
+  {
+    id: "elevenlabs",
+    name: "ElevenLabs",
+    category: "AI Video & Audio",
+    rating: 4.9,
+    reviewCount: 4500,
+    icon: Video,
+    description: "Industry-leading AI voice synthesis and audio generation platform with unmatched naturalness.",
+    longDescription: "ElevenLabs is the premier AI voice synthesis platform, renowned for producing the most natural, expressive, and human-like speech in the industry. It offers advanced voice cloning, multilingual text-to-speech, sound effects generation, and a voice library with hundreds of options. Its technology is used by content creators, game developers, audiobook producers, and accessibility advocates worldwide.",
+    pros: [
+      "Best-in-class voice quality with incredible emotional range",
+      "Professional voice cloning with minimal audio samples",
+      "Extensive voice library with diverse accents and styles",
+    ],
+    cons: [
+      "Free tier is quite limited in characters per month",
+      "Voice cloning can be slow for high-quality results",
+    ],
+    pricing: "$5/mo",
+    pricingDetail: "Free $0/mo | Starter $5/mo | Creator $22/mo | Pro $99/mo",
+    features: [
+      "Text-to-Speech with Ultra-Realistic Voices",
+      "Voice Cloning (Instant and Professional)",
+      "Multilingual TTS in 30+ Languages",
+      "AI Sound Effects Generation",
+      "Voice Design and Customization",
+      "Projects for Audiobook and Long-Form Content",
+      "API Access with Low Latency",
+      "Voice Library with 900+ Options",
+      "Speech-to-Speech Voice Conversion",
+      "Dubbing Studio for Video Localization",
+    ],
+    useCase: "Audiobook narration, video voiceovers, game character voices, accessibility tools, and multilingual content dubbing.",
+    alternatives: ["descript", "murf"],
+    scoreBreakdown: { features: 98.0, reviews: 96.0, momentum: 99.0, popularity: 98.0 },
+    userQuotes: [
+      { role: "Indie Game Developer", company: "PixelForge Games", quote: "ElevenLabs voices are so good our players can't tell they're AI — it elevated our entire game narrative." },
+    ],
+  },
+  {
+    id: "descript",
+    name: "Descript",
+    category: "AI Video & Audio",
+    rating: 4.6,
+    reviewCount: 3600,
+    icon: Video,
+    description: "All-in-one AI-powered audio/video editor that works like a document editor.",
+    longDescription: "Descript is a revolutionary audio and video editing platform that treats media as text — edit your audio or video by editing the transcript. It offers powerful AI features including filler word removal, studio-quality voice cloning (Overdub), screen recording, and collaborative editing. It has become the go-to tool for podcasters, YouTubers, and content teams who want a faster, more intuitive editing workflow.",
+    pros: [
+      "Edit video and audio by editing text — incredibly intuitive",
+      "AI-powered filler word removal and silence trimming",
+      "Built-in screen recording and transcription",
+    ],
+    cons: [
+      "Advanced video effects and compositing are limited",
+      "Can struggle with heavily accented or overlapping speech",
+    ],
+    pricing: "$12/mo",
+    pricingDetail: "Free $0/mo | Hobbyist $12/mo | Business $24/mo | Enterprise Custom",
+    features: [
+      "Transcript-Based Audio/Video Editing",
+      "Overdub AI Voice Cloning",
+      "Filler Word and Silence Removal",
+      "Screen Recording with Editing",
+      "Studio Sound Enhancement",
+      "AI-Powered Transcription (99% Accuracy)",
+      "Multi-Track Timeline Editor",
+      "Collaborative Editing with Comments",
+      "Export to Multiple Formats",
+      "Integration with Zapier and Other Tools",
+    ],
+    useCase: "Podcast production, YouTube content creation, video screen recordings, and collaborative media editing for teams.",
+    alternatives: ["murf", "veed-io"],
+    scoreBreakdown: { features: 91.0, reviews: 90.0, momentum: 94.0, popularity: 95.0 },
+    userQuotes: [
+      { role: "Podcaster", company: "The Daily Byte", quote: "Descript turned a full day of podcast editing into a 30-minute job. I'll never go back to traditional editors." },
+    ],
+  },
+  {
+    id: "murf",
+    name: "Murf",
+    category: "AI Video & Audio",
+    rating: 4.5,
+    reviewCount: 2100,
+    icon: Video,
+    description: "AI voice generator with a rich library of natural-sounding voices for voiceovers.",
+    longDescription: "Murf is a versatile AI voice generation platform that offers over 120 natural-sounding voices in 20+ languages. It specializes in creating professional voiceovers for videos, presentations, e-learning content, and advertisements. Murf's studio editor allows users to fine-tune pitch, emphasis, and pacing, and it also provides a built-in video editor for adding voiceovers directly to visuals.",
+    pros: [
+      "Large voice library with high-quality, natural voices",
+      "Fine-grained control over voice pitch, emphasis, and pacing",
+      "Built-in video editor for seamless voiceover integration",
+    ],
+    cons: [
+      "Voice cloning is less advanced than ElevenLabs",
+      "Free version has significant limitations",
+    ],
+    pricing: "$19/mo",
+    pricingDetail: "Free $0/mo | Basic $19/mo | Pro $26/mo | Enterprise $75/mo",
+    features: [
+      "120+ AI Voices in 20+ Languages",
+      "Voice Customization (Pitch, Emphasis, Pacing)",
+      "AI Voice Changer for Recorded Audio",
+      "Built-in Video Editor",
+      "Script-to-Speech with Grammar Assistance",
+      "Voiceover for Presentations (Google Slides, PPT)",
+      "Commercial Rights for All Plans",
+      "API Access for Developers",
+      "Team Collaboration and Workspaces",
+      "VoiceOver Studio with MuRF Technology",
+    ],
+    useCase: "E-learning voiceovers, corporate presentations, YouTube voiceovers, podcast intros, and commercial advertisements.",
+    alternatives: ["elevenlabs", "descript"],
+    scoreBreakdown: { features: 87.0, reviews: 88.0, momentum: 86.0, popularity: 85.0 },
+    userQuotes: [
+      { role: "E-Learning Designer", company: "EduTech Solutions", quote: "Murf makes creating multilingual course voiceovers effortless. The voice quality keeps our learners engaged." },
+    ],
+  },
+  {
+    id: "pictory",
+    name: "Pictory",
+    category: "AI Video & Audio",
+    rating: 4.4,
+    reviewCount: 1800,
+    icon: Video,
+    description: "AI video creation tool that turns blog posts and scripts into engaging videos automatically.",
+    longDescription: "Pictory is an AI-powered video creation platform that transforms long-form content like blog posts, articles, and scripts into short, engaging videos optimized for social media. It automatically extracts key scenes, adds captions, and applies visual assets from a massive stock media library. Pictory is particularly popular among marketers and content creators who need to repurpose written content into video format quickly.",
+    pros: [
+      "Converts blog posts into videos in minutes",
+      "Automatic scene extraction and caption generation",
+      "Huge built-in stock media library",
+    ],
+    cons: [
+      "Limited manual editing controls compared to full editors",
+      "AI avatars are not available — text-only narration",
+    ],
+    pricing: "$19/mo",
+    pricingDetail: "Starter $19/mo | Professional $39/mo | Teams $99/mo",
+    features: [
+      "Blog-to-Video Conversion",
+      "Script-to-Video Generation",
+      "Auto-Captioning and Subtitles",
+      "AI Scene Extraction from Long Videos",
+      "Massive Stock Video and Image Library",
+      "Brand Kit and Custom Watermarks",
+      "Text-to-Speech with Multiple Voices",
+      "Video Trimming and Basic Editing",
+      "Social Media Export Optimization",
+      "Team Collaboration",
+    ],
+    useCase: "Social media content repurposing, blog-to-video marketing, video summaries of long content, and quick promotional clips.",
+    alternatives: ["invideo-ai", "veed-io"],
+    scoreBreakdown: { features: 84.0, reviews: 85.0, momentum: 83.0, popularity: 82.0 },
+    userQuotes: [
+      { role: "Content Marketing Lead", company: "Digital Agency", quote: "Pictory saves us hours every week repurposing blog content into social videos. It's our secret weapon for short-form content." },
+    ],
+  },
+  {
+    id: "runway-gen-2",
+    name: "Runway Gen-2",
+    category: "AI Video & Audio",
+    rating: 4.7,
+    reviewCount: 2900,
+    icon: Video,
+    description: "Generative AI video model for creating videos from text, images, or video clips.",
+    longDescription: "Runway Gen-2 is a cutting-edge generative AI video model that creates high-quality videos from text prompts, images, or video clips. Developed by Runway Research, it represents a major leap in AI video synthesis, enabling filmmakers, artists, and creators to generate cinematic footage, stylized animations, and visual effects without traditional production tools. It's part of a broader creative suite that includes inpainting, outpainting, and frame interpolation.",
+    pros: [
+      "State-of-the-art text-to-video generation quality",
+      "Multiple modes: text-to-video, image-to-video, video-to-video",
+      "Integrated with a full creative suite of AI tools",
+    ],
+    cons: [
+      "Generation can be slow and requires processing time",
+      "Results can be inconsistent with complex prompts",
+    ],
+    pricing: "$15/mo",
+    pricingDetail: "Free $0/mo | Standard $15/mo | Pro $35/mo | Unlimited $95/mo",
+    features: [
+      "Text-to-Video Generation",
+      "Image-to-Video and Video-to-Video",
+      "Inpainting and Outpainting",
+      "Frame Interpolation and Slow Motion",
+      "AI Green Screen (Background Removal)",
+      "Motion Brush for Directional Control",
+      "Gen-1 Video Style Transfer",
+      "AI Training (Custom Model Training)",
+      "Collaborative Workspace",
+      "High-Resolution Export (Up to 4K)",
+    ],
+    useCase: "Film and video production, AI art creation, visual effects, concept visualization, and experimental creative projects.",
+    alternatives: ["pictory", "invideo-ai"],
+    scoreBreakdown: { features: 96.0, reviews: 90.0, momentum: 97.0, popularity: 93.0 },
+    userQuotes: [
+      { role: "Independent Filmmaker", company: "Creative Studio", quote: "Runway Gen-2 let me storyboard an entire short film in days instead of weeks. It's like having a VFX team in a browser." },
+    ],
+  },
+  {
+    id: "invideo-ai",
+    name: "Invideo AI",
+    category: "AI Video & Audio",
+    rating: 4.5,
+    reviewCount: 2500,
+    icon: Video,
+    description: "AI-powered video editor that generates complete videos from a simple text prompt.",
+    longDescription: "Invideo AI is an advanced video creation platform that generates complete, fully-edited videos from a simple text prompt or topic idea. It automatically writes the script, selects stock footage, adds voiceovers, applies transitions, and produces a polished video ready for publication. With a library of 5,000+ templates and 8M+ stock assets, it's designed for marketers, agencies, and businesses who need high-volume video production without a steep learning curve.",
+    pros: [
+      "Generates complete videos from a single text prompt",
+      "Massive template library with 5,000+ options",
+      "AI script writing and automatic scene matching",
+    ],
+    cons: [
+      "Free output has a watermark and limited quality",
+      "Less creative control than manual video editors",
+    ],
+    pricing: "$25/mo",
+    pricingDetail: "Free $0/mo | Plus $25/mo | Max $60/mo | Business Custom",
+    features: [
+      "Text-to-Video with Full Automation",
+      "5,000+ Pre-Built Video Templates",
+      "AI Script and Content Generation",
+      "8M+ Stock Video and Image Assets",
+      "AI Voiceover with Natural Voices",
+      "Auto-Captioning and Subtitles",
+      "Video Trimming and Scene Editing",
+      "Brand Kit with Logos and Colors",
+      "AI Text-to-Video in 50+ Languages",
+      "Team Collaboration and Workspace",
+    ],
+    useCase: "Social media video marketing, YouTube channel automation, agency video production at scale, and rapid ad creation.",
+    alternatives: ["pictory", "veed-io"],
+    scoreBreakdown: { features: 88.0, reviews: 86.0, momentum: 92.0, popularity: 88.0 },
+    userQuotes: [
+      { role: "Social Media Manager", company: "Growth Agency", quote: "Invideo AI lets us produce 20+ videos per week with a single prompt. It's completely changed our content pipeline." },
+    ],
+  },
+  {
+    id: "veed-io",
+    name: "VEED.IO",
+    category: "AI Video & Audio",
+    rating: 4.4,
+    reviewCount: 3100,
+    icon: Video,
+    description: "Online video editing platform with powerful AI subtitling and accessibility features.",
+    longDescription: "VEED.IO is a browser-based video editing platform that makes video creation accessible to everyone with powerful AI-driven features. It is best known for its highly accurate auto-subtitling and captioning engine, which supports multiple languages and custom styling. VEED also offers screen recording, video trimming, audio cleanup, and social-media-optimized export presets, making it a favorite for content creators, marketers, and educators who need quick, polished videos without installing software.",
+    pros: [
+      "Best-in-class auto-subtitling with excellent accuracy",
+      "Fully browser-based — no download or installation needed",
+      "Clean, intuitive interface with quick export options",
+    ],
+    cons: [
+      "Free plan caps video length and exports to 720p",
+      "Advanced editing features are limited compared to desktop editors",
+    ],
+    pricing: "$18/mo",
+    pricingDetail: "Free $0/mo | Basic $18/mo | Pro $30/mo | Enterprise Custom",
+    features: [
+      "Auto-Subtitles and Captions (99% Accuracy)",
+      "Online Video Editor with Timeline",
+      "Screen and Camera Recording",
+      "Audio Cleanup and Noise Reduction",
+      "AI Eye Contact Correction",
+      "Custom Subtitles Styling and Animation",
+      "Video Trimming, Cropping, and Resizing",
+      "Social Media Export Presets",
+      "Team Collaboration and Shared Projects",
+      "Integrations with Zoom, Google Drive, and More",
+    ],
+    useCase: "Social media video creation, educational content with subtitles, remote team video updates, and quick client-facing video edits.",
+    alternatives: ["descript", "invideo-ai"],
+    scoreBreakdown: { features: 85.0, reviews: 89.0, momentum: 88.0, popularity: 91.0 },
+    userQuotes: [
+      { role: "Content Creator", company: "YouTube Channel", quote: "VEED's auto-subtitles are insanely accurate. What used to take hours of manual captioning now takes 30 seconds." },
+    ],
+  },
+  {
+    id: "wondershare-filmora-ai",
+    name: "Wondershare Filmora AI",
+    category: "AI Video & Audio",
+    rating: 4.3,
+    reviewCount: 4200,
+    icon: Video,
+    description: "Popular video editing software with integrated AI-powered editing features.",
+    longDescription: "Wondershare Filmora AI is the AI-enhanced version of the widely popular Filmora video editing software. It integrates AI-driven tools such as text-to-video, AI music generation, intelligent object removal, auto-reframe, and AI portrait effects into the familiar Filmora desktop editor. Designed for intermediate creators and educators, it bridges the gap between professional-grade editing capabilities and accessible AI-powered automation.",
+    pros: [
+      "Rich set of AI features integrated into a mature editor",
+      "Large library of effects, transitions, and filters",
+      "Works offline as a desktop application",
+    ],
+    cons: [
+      "Desktop-only — no web or mobile editor",
+      "AI features can feel gimmicky compared to dedicated tools",
+    ],
+    pricing: "$49.99/yr",
+    pricingDetail: "Annual $49.99/yr | Perpetual $79.99 | Cross-Platform $89.99/yr",
+    features: [
+      "AI Text-to-Video Generation",
+      "AI Music and Soundtrack Generator",
+      "AI Object Removal (Smart Eraser)",
+      "AI Auto-Reframe for Different Aspect Ratios",
+      "AI Portrait Effects (Background Removal, Stickers)",
+      "AI Speech-to-Text and Text-to-Speech",
+      "AI Image Upscaling",
+      "Keyframing and Advanced Timeline Editing",
+      "4K and High-Resolution Export Support",
+      "Extensive Effects, Transitions, and Titles Library",
+    ],
+    useCase: "YouTube video production, tutorial creation, vlogging, event videos, and intermediate-level creative video projects.",
+    alternatives: ["veed-io", "descript"],
+    scoreBreakdown: { features: 86.0, reviews: 87.0, momentum: 82.0, popularity: 92.0 },
+    userQuotes: [
+      { role: "YouTube Educator", company: "Online Tutorial Channel", quote: "Filmora AI's smart tools let me focus on content instead of editing. The AI music generator is amazing for background tracks." },
+    ],
+  },
+];
