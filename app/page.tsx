@@ -119,7 +119,7 @@ export default function HomePage(props?: HomePageProps) {
               return (
                 <Link
                   key={cat.name}
-                  href={`/category/${cat.name.toLowerCase().replace(/ /g, "-").replace(/&/g, "-and-")}`}
+                  href={`/category/${cat.name.toLowerCase().replace(/ & /g, "-").replace(/&/g, "-and-").replace(/ /g, "-")}`}
                   className="rounded-xl p-4 transition-all hover:-translate-y-0.5 group"
                   style={{ backgroundColor: color.bg }}
                 >

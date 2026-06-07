@@ -7,7 +7,7 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 const ALL_CATEGORIES = Array.from(new Set(ALL_TOOLS.map((t) => t.category)));
 
 function slugify(category: string) {
-  return category.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "-and-");
+  return category.toLowerCase().replace(/ & /g, "-").replace(/&/g, "-and-").replace(/\s+/g, "-");
 }
 
 function deslugify(slug: string): string | undefined {
