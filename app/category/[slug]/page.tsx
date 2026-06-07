@@ -67,26 +67,26 @@ export default function CategoryPage({
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-[#3B82F6] transition-colors">
+        <div className="flex items-center gap-2 text-sm text-[#D97706] mb-6">
+          <Link href="/" className="hover:text-[#FEF3C7] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-gray-300">{category}</span>
+          <span className="text-[#B45309]">{category}</span>
         </div>
 
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-              Best {category} Tools
+            <h1 className="text-3xl md:text-4xl font-extrabold text-[#FEF3C7] tracking-tight">
+              Best {category}
             </h1>
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#162440] text-[#3B82F6]">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#4A2424] text-[#B45309]">
               <Layers className="w-3 h-3" />
-              {stats.count} tools
+              {stats.count} items
             </span>
           </div>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
+          <div className="flex items-center gap-4 text-sm text-[#D97706]">
             <span className="flex items-center gap-1">
               <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
               Avg. {stats.avgRating}/5
@@ -100,7 +100,7 @@ export default function CategoryPage({
             <Link
               key={tool.id}
               href={`/tools/${tool.slug}`}
-              className="block p-5 rounded-xl bg-[#0B1326]/60 border border-[#1E2A45] hover:border-[#3B82F6]/40 transition-all hover:-translate-y-0.5"
+              className="block p-5 rounded-xl bg-[#2A1414]/60 border border-[#4A2424] hover:border-[#B45309]/40 transition-all hover:-translate-y-0.5"
             >
               <div className="flex items-start justify-between mb-2">
                 <h3 className="font-semibold text-white">{tool.title}</h3>
@@ -109,8 +109,8 @@ export default function CategoryPage({
                   <span className="text-yellow-500 font-medium">{tool.rating}</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-500 line-clamp-2">
-                {tool.description || tool.shortDescription || ""}
+              <p className="text-sm text-[#D97706] line-clamp-2">
+                {tool.description || ""}
               </p>
             </Link>
           ))}
@@ -119,8 +119,8 @@ export default function CategoryPage({
         {/* Related Blog Posts */}
         {blogPosts.length > 0 && (
           <section>
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-[#3B82F6]" />
+            <h2 className="text-xl font-bold text-[#FEF3C7] mb-4 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-[#B45309]" />
               Related Articles
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
@@ -128,7 +128,7 @@ export default function CategoryPage({
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="block p-4 rounded-xl bg-[#0B1326]/40 border border-[#1E2A45] hover:border-[#3B82F6]/40 transition-all"
+                  className="block p-4 rounded-xl bg-[#2A1414]/40 border border-[#4A2424] hover:border-[#B45309]/40 transition-all"
                 >
                   <h3 className="font-medium text-white mb-1">{post.title}</h3>
                   <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
@@ -142,7 +142,7 @@ export default function CategoryPage({
         <div className="mt-8 text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:underline"
+            className="inline-flex items-center gap-2 text-sm text-[#B45309] hover:underline"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
