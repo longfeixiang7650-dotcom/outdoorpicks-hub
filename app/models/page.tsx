@@ -23,7 +23,6 @@ export default function ModelsPage() {
         <h1 className="text-3xl font-bold text-[#FEF3C7] mb-2">Gear & Equipment Library</h1>
         <p className="text-[#D97706] mb-8">Curated outdoor gear collection, all with detailed reviews.</p>
 
-        {/* Filter */}
         <div className="flex items-center gap-3 mb-8 flex-wrap">
           <button onClick={() => setActiveStyle(null)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${

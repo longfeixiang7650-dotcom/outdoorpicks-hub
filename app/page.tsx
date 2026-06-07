@@ -10,9 +10,6 @@ import {
 import Link from "next/link";
 
 // ============================================================
-// 模板D：画廊场景式首页
-// 适用于：户外旅行装备评测站 outdoorpicks.net
-// 布局：视觉画廊 + 场景分类 + 产品展示卡（带评分/标签/图片）
 // ============================================================
 
 const SITE_NAME = "Outdoor Picks";
@@ -33,7 +30,6 @@ export default function HomePage(props?: HomePageProps) {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // 分类
   const categories = useMemo(() => {
     const m = new Map<string, { count: number; avgRating: number }>();
     for (const t of tools) {
@@ -51,7 +47,6 @@ export default function HomePage(props?: HomePageProps) {
       .sort((a, b) => b.count - a.count);
   }, [tools]);
 
-  // 当前展示的工具
   const displayTools = useMemo(() => {
     let filtered = [...tools];
     if (selectedCategory) {
@@ -60,13 +55,11 @@ export default function HomePage(props?: HomePageProps) {
     return filtered.sort((a: any, b: any) => b.rating - a.rating);
   }, [tools, selectedCategory]);
 
-  // 编辑精选
   const editorPicks = useMemo(
     () => [...tools].sort((a: any, b: any) => b.rating - a.rating).slice(0, 6),
     [tools]
   );
 
-  // 热点话题（博客）
   const latestPosts = useMemo(
     () => [...posts]
       .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -74,7 +67,6 @@ export default function HomePage(props?: HomePageProps) {
     [posts]
   );
 
-  // 场景卡片配色
   const catColors = [
     { bg: "#1A1F30", accent: "#B45309" },
     { bg: "#1F1A30", accent: "#D97706" },
@@ -86,13 +78,11 @@ export default function HomePage(props?: HomePageProps) {
 
   return (
     <div className="min-h-screen bg-[#0A0A10]">
-      {/* ======== HERO — 画廊风格 ======== */}
       <section className="relative pt-24 pb-8 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A10] via-[#0F0F1A] to-[#0A0A10]" />
         <div className="absolute top-0 right-0 w-72 h-72 rounded-full opacity-[0.06] blur-[120px]"
           style={{ background: `radial-gradient(circle, ${ACCENT_COLOR}, ${SECONDARY_COLOR})` }} />
         <div className="relative max-w-6xl mx-auto">
-          {/* 场景标签 */}
           <div className="flex flex-wrap gap-2 mb-6">
             {categories.slice(0, 6).map((cat, i) => (
               <button
@@ -110,7 +100,6 @@ export default function HomePage(props?: HomePageProps) {
               </button>
             ))}
           </div>
-          {/* 标题 */}
           <div className="mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               Curated{" "}
@@ -124,7 +113,6 @@ export default function HomePage(props?: HomePageProps) {
               Find what works for your next adventure.
             </p>
           </div>
-          {/* 场景卡片预览 */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
             {categories.slice(0, 6).map((cat, i) => {
               const color = catColors[i % 6];
@@ -180,7 +168,6 @@ export default function HomePage(props?: HomePageProps) {
         </div>
       </section>
 
-      {/* ======== 工具展示区（画廊网格） ======== */}
       <section className="px-6 py-4 pb-12">
         <div className="max-w-6xl mx-auto">
           <div className={viewMode === "grid"
@@ -188,13 +175,11 @@ export default function HomePage(props?: HomePageProps) {
             : "space-y-3"}>
             {editorPicks.map((tool, i) => (
               viewMode === "grid" ? (
-                // 卡片网格模式
                 <Link
                   key={tool.id}
                   href={`/tools/${tool.id}`}
                   className="group bg-[#0F0F1A] border border-[#1E1E2E] rounded-xl overflow-hidden hover:border-[#2E2E4E] transition-all"
                 >
-                  {/* 图片占位 */}
                   <div className="aspect-[4/3] bg-gradient-to-br flex items-center justify-center"
                     style={{
                       background: `linear-gradient(135deg, ${catColors[i % 6].accent}20, ${catColors[(i + 3) % 6].accent}10)`
@@ -225,7 +210,6 @@ export default function HomePage(props?: HomePageProps) {
                   </div>
                 </Link>
               ) : (
-                // 列表模式
                 <Link
                   key={tool.id}
                   href={`/tools/${tool.id}`}
@@ -253,7 +237,6 @@ export default function HomePage(props?: HomePageProps) {
         </div>
       </section>
 
-      {/* ======== 热点文章（博客） ======== */}
       {latestPosts.length > 0 && (
         <section className="px-6 py-10">
           <div className="max-w-6xl mx-auto">
@@ -273,7 +256,6 @@ export default function HomePage(props?: HomePageProps) {
                   href={`/blog/${post.slug}`}
                   className="flex gap-4 bg-[#0F0F1A] border border-[#1E1E2E] rounded-xl p-5 hover:border-[#2E2E4E] transition-all group"
                 >
-                  {/* 装饰色块 */}
                   <div className="w-1 flex-shrink-0 rounded-full"
                     style={{ backgroundColor: catColors[i % 6].accent }} />
                   <div className="flex-1 min-w-0">

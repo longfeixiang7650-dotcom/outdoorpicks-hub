@@ -1,4 +1,3 @@
-// JSON-LD Schema for Organization (used on home/about pages)
 export function organizationSchema(name: string, url: string, description: string) {
   return {
     "@context": "https://schema.org",
@@ -9,7 +8,6 @@ export function organizationSchema(name: string, url: string, description: strin
   };
 }
 
-// JSON-LD Schema for SoftwareApplication (used on tool detail pages)
 export function softwareSchema(
   name: string,
   category: string,
@@ -36,7 +34,6 @@ export function softwareSchema(
   };
 }
 
-// JSON-LD Schema for BlogPosting (used on blog pages)
 export function blogPostSchema(
   headline: string,
   author: string,
@@ -61,7 +58,6 @@ export function blogPostSchema(
   };
 }
 
-// JSON-LD Schema for WebPage (used on category/list pages)
 export function webPageSchema(name: string, description: string, url: string) {
   return {
     "@context": "https://schema.org",

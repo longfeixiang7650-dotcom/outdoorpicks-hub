@@ -10,7 +10,6 @@ export default function PrivacyPage() {
   return (
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-[800px] mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#D97706] bg-[#4A2424] px-3 py-1.5 rounded-md mb-4">
             Legal

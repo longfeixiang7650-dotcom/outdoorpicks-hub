@@ -798,10 +798,6 @@ GitHub Copilot 每月 $10（Individual），支持 VS Code、JetBrains、Neovim 
 最好的Prompt就是注释。在写代码之前，先用注释描述你要做什么：
 
 \`\`\`typescript
-// Create a function that fetches user data from API
-// with caching and retry logic
-// Returns: Promise<UserData>
-// Throws: NetworkError if retries exhausted
 \`\`\`
 
 Copilot 会根据注释生成对应的代码实现。
@@ -813,7 +809,6 @@ Copilot 会根据注释生成对应的代码实现。
 \`\`\`typescript
 describe("UserService", () => {
   it("should return cached data if available", () => {
-    // Copilot 会自动补全测试逻辑
   })
 })
 \`\`\`
@@ -831,7 +826,6 @@ interface User {
   id: number;
   name: string;
   email: string;
-  // Copilot 会根据你的命名习惯补全其他字段
 }
 \`\`\`
 
@@ -844,8 +838,6 @@ interface User {
 正则表达式难写难记。用注释让 Copilot 帮你写：
 
 \`\`\`javascript
-// Regex to validate email address
-// Must contain @ and domain
 const emailRegex = /[Copilot 自动生成]/
 \`\`\`
 
@@ -854,7 +846,6 @@ const emailRegex = /[Copilot 自动生成]/
 Copilot 可以将代码从一种语言翻译到另一种：
 
 \`\`\`javascript
-// Translate this Python function to TypeScript
 \`\`\`
 
 粘贴 Python 代码，Copilot 会生成对应的 TypeScript 版本。

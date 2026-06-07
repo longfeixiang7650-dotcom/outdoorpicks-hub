@@ -18,7 +18,6 @@ export interface ResourceData {
 }
 
 export const ALL_RESOURCES: ResourceData[] = [
-  // ==================== Realistic Style ====================
   {
     id: "deliberate-v2",
     name: "Deliberate v2",
@@ -116,7 +115,6 @@ export const ALL_RESOURCES: ResourceData[] = [
     author: "Nijikage"
   },
 
-  // ==================== Anime Style ====================
   {
     id: "anything-v5",
     name: "Anything V5",
@@ -214,7 +212,6 @@ export const ALL_RESOURCES: ResourceData[] = [
     author: "dreamlike.art"
   },
 
-  // ==================== 2.5D ====================
   {
     id: "dreamned-vae",
     name: "Neverending Dream (NED)",
@@ -313,14 +310,12 @@ export const ALL_RESOURCES: ResourceData[] = [
   }
 ];
 
-// 按风格分组
 export const RESOURCES_BY_STYLE = {
   "真实系": ALL_RESOURCES.filter(r => r.style === "真实系"),
   "二次元": ALL_RESOURCES.filter(r => r.style === "二次元"),
   "2.5D": ALL_RESOURCES.filter(r => r.style === "2.5D"),
 };
 
-// 按分类分组
 export const RESOURCES_BY_CATEGORY = ALL_RESOURCES.reduce((acc, r) => {
   if (!acc[r.category]) acc[r.category] = [];
   acc[r.category].push(r);

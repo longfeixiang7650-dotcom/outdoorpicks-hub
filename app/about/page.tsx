@@ -35,7 +35,6 @@ export default function AboutPage() {
   return (
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-[800px] mx-auto">
-        {/* Hero */}
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#D97706] bg-[#4A2424] px-3 py-1.5 rounded-md mb-4">
             About
@@ -51,7 +50,6 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* What We Do */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#FEF3C7] mb-6">What We Do</h2>
           <div className="space-y-4 text-[#D97706] leading-relaxed">
@@ -78,7 +76,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* How We Work */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#FEF3C7] mb-8 text-center">
             How We Curate Gear
@@ -102,7 +99,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Update Frequency */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#FEF3C7] mb-6">Update Frequency</h2>
           <div className="space-y-4 text-[#D97706] leading-relaxed">
@@ -121,7 +117,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Operation */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#FEF3C7] mb-6">How We Operate</h2>
           <div className="space-y-4 text-[#D97706] leading-relaxed">

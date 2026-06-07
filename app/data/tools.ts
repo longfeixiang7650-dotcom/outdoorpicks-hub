@@ -60,7 +60,6 @@ export interface ToolData {
 }
 
 export const ALL_TOOLS: ToolData[] = [
-  // ======== AI Writing & Content (10 tools) ========
 
     {
       id: "chatgpt",
@@ -509,7 +508,6 @@ export const ALL_TOOLS: ToolData[] = [
       ]
     },
 
-  // ======== AI Image & Design (10 tools) ========
 
     {
       id: "midjourney",
@@ -897,7 +895,6 @@ export const ALL_TOOLS: ToolData[] = [
     },
 
 
-  // ======== AI Code & Dev (10 tools) ========
 
     {
       id: "github-copilot",
@@ -1280,7 +1277,6 @@ export const ALL_TOOLS: ToolData[] = [
       ]
     },
 
-  // ======== AI Video & Audio (10 tools) ========
 
     {
       id: "synthesia",
@@ -1674,7 +1670,6 @@ export const ALL_TOOLS: ToolData[] = [
     },
 
 
-  // ======== AI Productivity (10 tools) ========
 
     {
       id: "notion-ai",
@@ -2057,7 +2052,6 @@ export const ALL_TOOLS: ToolData[] = [
       ]
     },
 
-  // ======== AI Marketing & SEO (10 tools) ========
 
     {
       id: "semrush-ai",
@@ -2500,7 +2494,6 @@ export const ALL_TOOLS: ToolData[] = [
       ]
     },
 
-  // ======== AI Data & Analytics (10 tools) ========
 
     {
       id: "tableau-ai",
@@ -2883,7 +2876,6 @@ export const ALL_TOOLS: ToolData[] = [
       ]
     },
 
-  // ======== AI No-Code & Automation (10 tools) ========
 
     {
       id: "zapier-ai",
@@ -3269,7 +3261,6 @@ export const ALL_TOOLS: ToolData[] = [
 
 ,
 
-  // ======== AI Agent & Framework (9 tools) ========
   {
     id: "autogpt",
     name: "AutoGPT",

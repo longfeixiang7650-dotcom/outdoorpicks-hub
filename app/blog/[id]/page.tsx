@@ -6,12 +6,10 @@ import { renderMarkdown } from "@/lib/markdown";
 import { ArrowLeft, Calendar, Clock, User, Tags } from "lucide-react";
 import { blogPostSchema, organizationSchema } from "@/lib/schema";
 
-// Generate static params for all blog posts
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ id: post.slug }));
 }
 
-// Dynamic metadata per post
 export function generateMetadata({
   params,
 }: {
@@ -63,7 +61,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="relative pt-28 pb-20 px-6">
-      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -77,7 +74,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
         }}
       />
       <div className="max-w-3xl mx-auto">
-        {/* Back link */}
         <Link
           href="/blog"
           className="inline-flex items-center text-[#D97706] hover:text-[#B45309] transition-colors mb-8 text-sm"
@@ -85,7 +81,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
         </Link>
 
-        {/* Article Header */}
         <header className="mb-10">
           <div className="flex items-center gap-2 mb-4 flex-wrap">
             <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-[#B45309]/20 text-[#B45309]">
@@ -109,7 +104,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             {post.excerpt}
           </p>
 
-          {/* Author */}
           <div className="flex items-center gap-2 mb-4 text-sm text-[#D97706]">
             <User className="w-4 h-4" />
             <span>
@@ -118,7 +112,6 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
             </span>
           </div>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-1.5">
             <Tags className="w-4 h-4 text-[#B45309] mr-1 self-center" />
             {post.tags.map((tag) => (
@@ -132,13 +125,11 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           </div>
         </header>
 
-        {/* Article Content */}
         <article
           className="prose-content mb-12"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
 
-        {/* Footer navigation */}
         <div className="border-t border-[#4A2424] pt-8 flex items-center justify-between">
           <Link
             href="/blog"

@@ -115,7 +115,6 @@ export default function FeaturedResources() {
   return (
     <section id="featured" className="relative py-20 px-6">
       <div className="max-w-[1200px] mx-auto">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +139,6 @@ export default function FeaturedResources() {
           </a>
         </motion.div>
 
-        {/* Resource Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -157,10 +155,8 @@ export default function FeaturedResources() {
                 variants={cardVariants}
                 className="group bg-[#2A1414] border border-[#4A2424] rounded-xl p-6 card-hover cursor-pointer relative overflow-hidden"
               >
-                {/* Type Gradient Accent */}
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${typeInfo.bg} to-transparent`} />
                 
-                {/* Top Row: Icon + Type Badge */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 rounded-lg bg-[#4A2424] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6 text-[#D97706]" />
@@ -172,22 +168,18 @@ export default function FeaturedResources() {
                   </span>
                 </div>
 
-                {/* Name */}
                 <h3 className="text-lg font-bold text-[#FEF3C7] mb-1 group-hover:text-[#D97706] transition-colors">
                   {resource.name}
                 </h3>
 
-                {/* Category Badge */}
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#D97706] bg-[#4A2424] px-2.5 py-1 rounded-md mb-3">
                   {resource.category}
                 </span>
 
-                {/* Description */}
                 <p className="text-sm text-[#D97706] mb-6 leading-relaxed">
                   {resource.description}
                 </p>
 
-                {/* Bottom Row: Stats + CTA */}
                 <div className="flex items-center justify-between pt-4 border-t border-[#4A2424]">
                   <div className="flex items-center gap-3 text-xs text-[#B45309]">
                     <div className="flex items-center gap-1">
@@ -210,7 +202,6 @@ export default function FeaturedResources() {
           })}
         </motion.div>
 
-        {/* Mobile View All Button */}
         <div className="mt-8 sm:hidden flex justify-center">
           <button className="w-full px-6 py-3 text-sm font-medium text-[#D97706] bg-[#2A1414] border border-[#4A2424] rounded-lg hover:bg-[#4A2424] transition-colors">
             View All

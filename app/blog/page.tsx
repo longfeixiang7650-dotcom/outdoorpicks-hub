@@ -10,18 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default function BlogListPage() {
-  // Sort by date descending
   const sortedPosts = [...BLOG_POSTS].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
-  // Collect unique categories
   const allCategories = [...new Set(sortedPosts.map((p) => p.category))];
 
   return (
     <div className="relative pt-28 pb-20 px-6">
       <div className="max-w-[1200px] mx-auto">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#FEF3C7] tracking-tight mb-4">
             Outdoor Gear Blog
@@ -31,7 +28,6 @@ export default function BlogListPage() {
           </p>
         </div>
 
-        {/* Article Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sortedPosts.map((post) => (
             <Link

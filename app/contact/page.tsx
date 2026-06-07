@@ -13,7 +13,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to an API endpoint
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
@@ -21,7 +20,6 @@ export default function ContactPage() {
   return (
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-[800px] mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#D97706] bg-[#4A2424] px-3 py-1.5 rounded-md mb-4">
             Contact
@@ -36,7 +34,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="bg-[#2A1414] border border-[#4A2424] rounded-xl p-8">
               <h2 className="text-xl font-bold text-[#FEF3C7] mb-6">Send Us a Message</h2>
@@ -116,7 +113,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Info Sidebar */}
           <div className="lg:col-span-2 space-y-5">
             <div className="bg-[#2A1414] border border-[#4A2424] rounded-xl p-6">
               <h3 className="text-sm font-semibold text-[#FEF3C7] mb-4 flex items-center gap-2">
